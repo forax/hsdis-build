@@ -1,5 +1,11 @@
 sudo: true
 
+language: java
+
+before_install:
+  - sudo apt-get install build-essential
+  - sudo apt-get install lzip
+
 script:
   - chmod u+x ./build.sh
   - ./build.sh
