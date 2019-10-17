@@ -19,7 +19,7 @@ export BINUTILS=binutils-2.31.1
 
 make all64
 
-ls -l build
+ls -R build
 
 
 
