@@ -21,7 +21,10 @@ make all64
 
 cd ../../../..
 
+ls -R jdk/src/utils/hsdis/build
+
 # get hsdis-amd64.so
+echo "copy hsdis-amd64.so"
 cp jdk/src/utils/hsdis/build/linux-amd64/hsdis-amd64.so .
 
 
