@@ -19,13 +19,16 @@ export BINUTILS=binutils-2.31.1
 
 make all64
 
+# exit
 cd ../../../..
 
-ls -R jdk/src/utils/hsdis/build
-
-# get hsdis-amd64.so
+# copy hsdis-amd64.so
 echo "copy hsdis-amd64.so"
 cp jdk/src/utils/hsdis/build/linux-amd64/hsdis-amd64.so .
+
+# remove jdk
+rm -fr jdk
+
 
 
 
