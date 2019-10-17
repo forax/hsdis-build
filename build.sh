@@ -19,7 +19,12 @@ export BINUTILS=binutils-2.31.1
 
 make all64
 
-ls -R build
+cd ../../../..
+
+# get hsdis-amd64.so
+cp jdk/src/utils/hsdis/build/linux-amd64/hsdis-amd64.so .
+
+
 
 
 
