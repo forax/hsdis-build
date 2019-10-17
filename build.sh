@@ -8,9 +8,9 @@ wget https://ftp.gnu.org/gnu/binutils/binutils-2.31.1.tar.lz
 
 # uncompress, untar
 lzip --decompress binutils-2.31.1.tar.lz
-tar xvf binutils-2.31.1.tar
+tar xf binutils-2.31.1.tar
 
-export BINUTILS=./binutils-2.31.1
+export BINUTILS=binutils-2.31.1
 
 # clone jdk
 git clone https://github.com/openjdk/jdk.git
