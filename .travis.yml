@@ -1,13 +1,18 @@
 sudo: true
-
 language: java
 
 before_install:
-  - sudo apt-get install build-essential
-  - sudo apt-get install lzip
+- sudo apt-get install build-essential
+- sudo apt-get install lzip
 
 script:
-  - chmod u+x ./build.sh
-  - ./build.sh
+- chmod u+x ./build.sh
+- "./build.sh"
 
-  
+deploy:
+  provider: releases
+  api_key:
+    secure: RjfeeGPcQkMuP0o2eVgnX5tZV+Y5G1hOT9Z4siolvtJiAlssCg4ZQGO7V9mGm9mWlsGkLuzkTsHViMgZj7pptxD9vc0FhnOPUc9HKE2oJLX1JQxiq9zuckaMji3T3ROmwOYQdf/H4kgODuFTn/MBAUVhZmSOeZE/cWvZBoH+BJAUEPqDx33FJW7XmQadmMPGZjhBMwPl1smsS38zbOP2IPJjFQ9ZXCYjgASyqinV3Q8toh5zS2/nzM2kdl3eWS/MWrxVzcFClC9iDFX9KrFH/OSsIMq3SoJLVRDK5CuUb6bG272v2ca78ewXxPFUo6xFIjDcRn7O4ygbggWIC3duglZV6gEGLUL4skUCzZNnR5VVZfIekIKcMKE0RxTxnrOkTe3NGt0lbOvhzIDdJ3NSGoCrrqQRKg411gTpra1D5GLM/LqVfHZ1b5V2T/FfCJgOH6XltxuFO+t/Vv0CXCUiRXIg0JpIT4iMLXM4b1kLnFOfeAV7klrylDlOVfVOr+TYDeJ+7mlOEnvSKoNaNw1yXKnfg81qIOBMPpqdMf9ThFfa63O0Kbpp5mySk/SldDGytU6FZHn9Jg/4t/QW5OdTBIgtEWsZkjfnSy8x7+eAWqb/TcroFiSoiw1gAdF2T7RXt9O/FJCNXxy+fSFgX1MtukUdqFJSSIqg8c4cgGOZj6g=
+  file: build/linux-amd64/hsdis-amd64.so
+  on:
+    repo: forax/hsdis-build
