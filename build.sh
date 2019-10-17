@@ -3,6 +3,11 @@
 # install lzip
 #sudo apt-get install lzip
 
+# clone jdk
+git clone https://github.com/openjdk/jdk.git
+
+cd jdk/src/utils/hsdis
+
 # get binutils
 wget https://ftp.gnu.org/gnu/binutils/binutils-2.31.1.tar.lz
 
@@ -12,10 +17,6 @@ tar xf binutils-2.31.1.tar
 
 export BINUTILS=binutils-2.31.1
 
-# clone jdk
-git clone https://github.com/openjdk/jdk.git
-
-cd jdk/src/utils/hsdis
 make all64
 
 ls -l build
