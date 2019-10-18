@@ -1,1 +1,1 @@
-brew lzip
+brew "lzip"
