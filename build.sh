@@ -22,9 +22,9 @@ make all64
 # exit
 cd ../../../..
 
-# copy hsdis-amd64.so
-echo "copy hsdis-amd64.so"
-cp jdk/src/utils/hsdis/build/linux-amd64/hsdis-amd64.so .
+# copy hsdis-amd64.*
+echo "copy hsdis-amd64.*"
+cp jdk/src/utils/hsdis/build/linux-amd64/hsdis-amd64.* .
 
 # remove jdk
 rm -fr jdk
