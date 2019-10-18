@@ -1,6 +1,10 @@
 sudo: true
 language: java
 
+addons:
+  homebrew:
+    brewfile: brewfile.travis
+
 os:
   - linux
   - osx
@@ -8,7 +12,7 @@ os:
 before_install:
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install build-essential ; fi
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install lzip ; fi
-- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew lzip ; fi
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew bundle ; fi
 
 script:
 - chmod u+x ./build.sh
