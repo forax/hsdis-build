@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# install lzip
-#sudo apt-get install lzip
-
 # clone jdk
 git clone https://github.com/openjdk/jdk.git
 
@@ -23,8 +20,9 @@ make all64
 cd ../../../..
 
 # copy hsdis-amd64.*
-echo "copy hsdis-amd64.*"
-cp jdk/src/utils/hsdis/build/linux-amd64/hsdis-amd64.* .
+echo "copy hsdis-amd64"
+cp jdk/src/utils/hsdis/build/linux-amd64/hsdis-amd64.so .
+cp jdk/src/utils/hsdis/build/macosx-amd64/hsdis-amd64.dylib .
 
 # remove jdk
 rm -fr jdk
