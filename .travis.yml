@@ -1,9 +1,13 @@
 sudo: true
 language: java
 
+os:
+  - linux
+  - osx
+
 before_install:
-- sudo apt-get install build-essential
-- sudo apt-get install lzip
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install build-essential ; fi
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install lzip ; fi
 
 script:
 - chmod u+x ./build.sh
