@@ -21,9 +21,8 @@ cd ../../../..
 
 # copy hsdis-amd64.*
 echo "copy hsdis-amd64"
-mkdir releases
-cp jdk/src/utils/hsdis/build/linux-amd64/hsdis-amd64.so releases
-cp jdk/src/utils/hsdis/build/macosx-amd64/hsdis-amd64.dylib releases
+cp jdk/src/utils/hsdis/build/linux-amd64/hsdis-amd64.so .
+cp jdk/src/utils/hsdis/build/macosx-amd64/hsdis-amd64.dylib .
 
 # remove jdk
 rm -fr jdk
