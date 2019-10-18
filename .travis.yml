@@ -6,8 +6,6 @@ addons:
     packages:
     - build-essential
     - lzip
-
-addons:
   homebrew:
     packages:
     - lzip
